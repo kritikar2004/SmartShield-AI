@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>SmartShield AI Dashboard</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+  <div class="dashboard-container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+      <h2 class="dashboard-logo">
+        SmartShield AI
+      </h2>
+
+      <ul class="sidebar-links">
+
+  <li>
+    <a href="#dashboard">
+      Dashboard
+    </a>
+  </li>
+
+  <li>
+    <a href="#transactions">
+      Transactions
+    </a>
+  </li>
+
+  <li>
+    <a href="#alerts">
+      Fraud Alerts
+    </a>
+  </li>
+
+  <li>
+    <a href="#analytics">
+      Analytics
+    </a>
+  </li>
+
+</ul>
+
+    </aside>
+
+    <!-- Main Dashboard -->
+
+    <main class="dashboard-main">
+
+      <div class="dashboard-header">
+
+  <h1 class="dashboard-title">
+    Fraud Detection Dashboard
+  </h1>
+
+  <button
+    onclick="resetDashboard()"
+    class="reset-btn"
+  >
+    Reset Dashboard
+  </button>
+
+</div>
+
+      <!-- Analytics Cards -->
+
+      <section id="dashboard" class="dashboard-cards">
+
+        <div class="dashboard-card">
+        <h2 id="totalTransactions">0</h2>
+        <p>Total Transactions</p>
+        </div>
+
+        <div class="dashboard-card">
+          <h2 id="fraudAlerts">0</h2>
+          <p>Fraud Alerts</p>
+        </div>
+
+        <div class="dashboard-card">
+          <h2 id="accuracyRate">0%</h2>
+          <p>Risk Engine Confidence</p>
+        </div>
+
+      </section>
+
+      <!-- Fraud Alert Panel -->
+
+      <section id="alerts" class="alert-panel">
+
+        <h2>Recent Fraud Alerts</h2>
+
+        <div id="alertsContainer"></div>
+
+      </section>
+
+      <section class="intelligence-panel">
+
+  <h2>
+    Fraud Intelligence
+  </h2>
+
+  <div class="intelligence-grid">
+
+    <div class="intelligence-card">
+
+      <h3>
+        Top Risky Locations
+      </h3>
+
+      <div id="topLocations"></div>
+
+    </div>
+
+    <div class="intelligence-card">
+
+      <h3>
+        Most Common Risk Factors
+      </h3>
+
+      <div id="topRiskFactors"></div>
+
+    </div>
+
+    <div class="intelligence-card">
+
+      <h3>
+        Highest Risk Transaction
+      </h3>
+
+      <div id="highestRiskTransaction"></div>
+
+    </div>
+
+  </div>
+
+</section>
+
+      <!-- Transactions Table -->
+
+      <section id="transactions" class="transaction-section">
+
+        <h2>Recent Transactions</h2>
+
+        <table>
+
+          <thead>
+            <tr>
+              <th>Transaction ID</th>
+              <th>Amount</th>
+              <th>Status</th>
+              <th>Risk Score</th>
+              <th>Confidence</th>
+              <th>Risk Level</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+
+          <tbody id="transactionTableBody"></tbody>
+
+
+        </table>
+
+      </section>
+
+      <!-- Analytics Charts -->
+
+<section id="analytics" class="charts-section">
+
+  <h2>
+    Fraud Analytics
+  </h2>
+
+  <div class="charts-grid">
+
+    <div class="chart-card">
+      <canvas id="transactionChart"></canvas>
+    </div>
+
+    <div class="chart-card">
+      <canvas id="riskChart"></canvas>
+    </div>
+
+  </div>
+
+</section>
+
+    </main>
+
+  </div>
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>

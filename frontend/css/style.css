@@ -1,0 +1,806 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0b1120;
+  color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Glow Effects */
+
+.glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: -1;
+}
+
+.glow1 {
+  width: 300px;
+  height: 300px;
+  background: cyan(32, 190, 39);
+  top: -100px;
+  left: -100px;
+  opacity: 0.2;
+}
+
+.glow2 {
+  width: 400px;
+  height: 400px;
+  background: blue;
+  bottom: -150px;
+  right: -150px;
+  opacity: 0.2;
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 80px;
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  font-size: 2rem;
+  color: cyan;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: cyan;
+}
+
+/* Hero Section */
+
+.hero {
+  text-align: center;
+  margin-top: 100px;
+  padding: 0 20px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  background: rgba(0, 255, 255, 0.08);
+  border-radius: 50px;
+  color: cyan;
+  margin-bottom: 30px;
+}
+
+.hero h1 {
+  font-size: 5rem;
+  max-width: 1000px;
+  margin: auto;
+  line-height: 1.2;
+}
+
+.hero span {
+  color: cyan;
+}
+
+.hero p {
+  margin-top: 30px;
+  color: #aaa;
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+/* Buttons */
+
+.hero-buttons {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 16px 32px;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.primary-btn {
+  background: cyan;
+  color: black;
+  font-weight: bold;
+}
+
+.primary-btn:hover {
+  transform: scale(1.05);
+}
+
+.secondary-btn {
+  background: transparent;
+  border: 1px solid cyan;
+  color: white;
+}
+
+.secondary-btn:hover {
+  background: cyan;
+  color: black;
+}
+
+/* Stats Section */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 100px 80px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card h2 {
+  color: cyan;
+  font-size: 3rem;
+}
+
+.card p {
+  margin-top: 15px;
+  color: #bbb;
+  font-size: 1.1rem;
+}
+
+/* Features Section */
+
+.features {
+  padding: 100px 80px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 60px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  border-color: cyan;
+}
+
+.feature-card h3 {
+  color: cyan;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.feature-card p {
+  color: #bbb;
+  line-height: 1.7;
+}
+
+/* About Section */
+
+.about {
+  padding: 100px 80px;
+  text-align: center;
+}
+
+.about-content {
+  max-width: 900px;
+  margin: auto;
+}
+
+.about h2 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+
+.about p {
+  color: #bbb;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+/* Footer */
+
+footer {
+  padding: 50px 20px;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+footer h2 {
+  color: cyan;
+  margin-bottom: 15px;
+}
+
+footer p {
+  color: #aaa;
+}
+
+.copyright {
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+/* Dashboard */
+
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+
+.sidebar {
+  width: 260px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px 20px;
+  border-right: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+}
+
+.dashboard-logo {
+  color: cyan;
+  margin-bottom: 50px;
+  font-size: 2rem;
+}
+
+.sidebar-links {
+  list-style: none;
+}
+
+.sidebar-links li {
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sidebar-links li:hover {
+  background: rgba(0,255,255,0.1);
+  color: cyan;
+}
+
+/* Main Dashboard */
+
+.dashboard-main {
+  flex: 1;
+  padding: 40px;
+}
+
+.dashboard-title {
+  font-size: 3rem;
+  margin-bottom: 40px;
+}
+
+/* Cards */
+
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 25px;
+}
+
+.dashboard-card {
+  background: rgba(255,255,255,0.05);
+  padding: 35px;
+  border-radius: 25px;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: 0.3s;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-10px);
+}
+
+.dashboard-card h2 {
+  color: cyan;
+  font-size: 3rem;
+}
+
+.dashboard-card p {
+  margin-top: 15px;
+  color: #bbb;
+}
+
+/* Alert Panel */
+
+.alert-panel {
+  margin-top: 60px;
+}
+
+.alert-panel h2 {
+  margin-bottom: 25px;
+}
+
+.alert-box {
+  background: rgba(255,0,0,0.08);
+  border: 1px solid rgba(255,0,0,0.2);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  color: #ff9b9b;
+}
+
+.high-risk-alert {
+
+  border-left: 6px solid orange;
+
+}
+
+.critical-risk-alert {
+
+  border-left: 6px solid red;
+
+  box-shadow:
+    0 0 15px rgba(
+      255,
+      0,
+      0,
+      0.4
+    );
+
+}
+/* Transactions */
+
+.transaction-section {
+  margin-top: 60px;
+}
+
+.transaction-section h2 {
+  margin-bottom: 25px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255,255,255,0.04);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 20px;
+  text-align: left;
+}
+
+th {
+  background: rgba(255,255,255,0.08);
+}
+
+tr {
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.low-risk {
+  color: lightgreen;
+}
+
+.medium-risk {
+  color: orange;
+}
+
+.high-risk {
+  color: red;
+}
+
+/* Charts Section */
+
+.charts-section {
+  margin-top: 70px;
+}
+
+.charts-section h2 {
+  margin-bottom: 30px;
+}
+
+.charts-grid {
+
+  display: grid;
+
+  grid-template-columns:
+  repeat(auto-fit, minmax(500px, 1fr));
+
+  gap: 25px;
+
+  margin-top: 20px;
+
+}
+.chart-card {
+
+  background: #111827;
+
+  padding: 25px;
+
+  border-radius: 15px;
+
+  min-height: 450px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  border: 1px solid #1f2937;
+
+}
+
+/* Fraud Checker */
+
+.checker-container {
+  min-height: 100vh;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.checker-container h1 {
+  font-size: 3rem;
+  margin-bottom: 50px;
+}
+
+.checker-form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.checker-form input {
+  padding: 18px;
+  border-radius: 15px;
+  border: none;
+  background: rgba(255,255,255,0.08);
+  color: white;
+  font-size: 1rem;
+  outline: none;
+}
+
+.checker-form button {
+  padding: 18px;
+  border-radius: 15px;
+  border: none;
+  background: cyan;
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.checker-form button:hover {
+  transform: scale(1.03);
+}
+
+.result-box {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 40px;
+  border-radius: 25px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.result-box h2 {
+  margin-bottom: 20px;
+}
+
+#resultText {
+  font-size: 1.2rem;
+  color: #bbb;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .stats,
+  .features,
+  .about {
+    padding: 60px 20px;
+  }
+
+}
+
+  /* =========================
+   RESULT CARD
+========================= */
+
+.result-card {
+
+  background: #111827;
+
+  padding: 20px;
+
+  border-radius: 12px;
+
+  margin-top: 20px;
+
+  border: 1px solid #1f2937;
+
+  box-shadow:
+  0 0 15px rgba(0,255,255,0.1);
+
+}
+
+/* =========================
+   RISK LEVEL
+========================= */
+
+.risk-level {
+
+  padding: 6px 12px;
+
+  border-radius: 8px;
+
+  font-weight: bold;
+
+  background: crimson;
+
+  color: white;
+
+}
+
+/* =========================
+   LOW RISK
+========================= */
+
+.low-risk {
+
+  background: #16a34a;
+
+  box-shadow:
+  0 0 12px rgba(34,197,94,0.5);
+
+}
+
+/* =========================
+   MEDIUM RISK
+========================= */
+
+.medium-risk {
+
+  background: #eab308;
+
+  color: black;
+
+  box-shadow:
+  0 0 12px rgba(234,179,8,0.5);
+
+}
+
+/* =========================
+   HIGH RISK
+========================= */
+
+.high-risk {
+
+  background: #f97316;
+
+  box-shadow:
+  0 0 12px rgba(249,115,22,0.5);
+
+}
+
+/* =========================
+   CRITICAL RISK
+========================= */
+
+.critical-risk {
+
+  background: #dc2626;
+
+  box-shadow:
+  0 0 15px rgba(220,38,38,0.7);
+
+}
+
+/* =========================
+   CHART FIX
+========================= */
+
+.chart-card {
+
+  height: 400px;
+
+  padding: 20px;
+
+}
+
+.chart-card canvas {
+
+  width: 100% !important;
+
+  height: 100% !important;
+
+}
+
+canvas {
+
+  width: 100% !important;
+
+  height: 100% !important;
+
+}
+
+.intelligence-panel {
+
+  margin-top: 30px;
+
+}
+
+.intelligence-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(250px, 1fr)
+    );
+
+  gap: 20px;
+
+}
+.intelligence-card {
+
+  background: rgba(
+    255,
+    255,
+    255,
+    0.05
+  );
+
+  padding: 20px;
+
+  border-radius: 15px;
+
+  border: 1px solid rgba(
+    255,
+    255,
+    255,
+    0.08
+  );
+
+}
+
+.simulate-btn {
+
+  margin-top: 15px;
+
+  padding: 12px 25px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+}
+
+.reset-btn {
+
+  padding: 12px 20px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  font-weight: bold;
+
+}
+
+.dashboard-header {
+
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 15px;
+
+}
+
+.sidebar-links a {
+
+  color: white;
+
+  text-decoration: none;
+
+  display: block;
+
+  width: 100%;
+
+}
+
+.sidebar-links a:hover {
+
+  color: cyan;
+
+}
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Fraud Checker</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js"></script>
+</head>
+
+<body>
+
+  <div class="checker-container">
+
+    <h1>
+      AI Fraud Detection Checker
+    </h1>
+
+    <div class="checker-form">
+
+      <input type="text" id="transactionId" placeholder="Transaction ID">
+
+      <input type="number" id="amount" placeholder="Transaction Amount">
+
+      <input type="text" id="location" placeholder="Transaction Location">
+
+      <button onclick="analyzeTransaction()">
+        Analyze Transaction
+      </button>
+
+      <button
+  onclick="generateTransactions()"
+  class="simulate-btn"
+>
+
+Generate 50 Transactions
+
+</button>
+
+    </div>
+
+    <!-- Result Box -->
+
+    <div class="result-box" id="resultBox">
+
+      <h2>Prediction Result</h2>
+
+      <p id="resultText">
+        Waiting for analysis...
+      </p>
+
+    </div>
+
+  </div>
+
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
